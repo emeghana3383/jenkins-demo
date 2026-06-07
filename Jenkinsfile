@@ -5,21 +5,26 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Building Application'
+                bat 'echo Building Application'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running Tests'
+                bat 'echo Running Tests'
+            }
+        }
+
+        stage('Package') {
+            steps {
+                bat 'echo Packaging Application'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying Application'
+                bat 'echo Deploying Application'
             }
         }
-
     }
 }
